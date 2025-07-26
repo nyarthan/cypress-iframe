@@ -1,6 +1,6 @@
 {
   "name": "cypress-iframe",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "description": "Adds iframe support to Cypress",
   "main": "dist/index.js",
   "types": "index.d.ts",
@@ -16,7 +16,9 @@
     "serve": "serve wp -p 9000",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "types": "tsc"
+    "types": "tsc",
+    "prerelease": "pnpm build",
+    "release": "pnpm publish --access public --provenance"
   },
   "repository": {
     "type": "git",
@@ -47,6 +49,7 @@
   },
   "homepage": "https://github.com/nyarthan/cypress-iframe#readme",
   "devDependencies": {
+    "@changesets/cli": "2.29.5",
     "@cypress/webpack-preprocessor": "6.0.4",
     "@nyarthan/prettier-config": "1.0.1",
     "@rslib/core": "0.11.0",
