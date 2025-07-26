@@ -1,3 +1,3 @@
-import '../../src/index'
+import "../../src/index";
 
-console.log('foooo2')
+console.log("foooo2");

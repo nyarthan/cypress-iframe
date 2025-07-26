@@ -14,8 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
-console.log('foooo')
+import "./commands";
+console.log("foooo");
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

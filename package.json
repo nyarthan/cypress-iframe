@@ -13,7 +13,9 @@
     "start": "start-server-and-test wp http-get://localhost:9000 \"cypress open\"",
     "test": "start-server-and-test wp http-get://localhost:9000 \"cypress run\"",
     "record": "start-server-and-test wp http-get://localhost:9000 \"cypress run --record\"",
-    "wp": "webpack-dev-server"
+    "wp": "webpack-dev-server",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "repository": {
     "type": "git",
@@ -48,11 +50,13 @@
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.1",
+    "@nyarthan/prettier-config": "^1.0.1",
     "@types/cypress": "^1.1.0",
     "@types/node": "^13.7.0",
     "@types/webpack": "^4.41.3",
     "@types/webpack-dev-server": "^3.10.0",
     "cypress": "^3.8.3",
+    "prettier": "^3.6.2",
     "start-server-and-test": "^1.10.8",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",

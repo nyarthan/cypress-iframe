@@ -11,6 +11,9 @@ importers:
       '@cypress/webpack-preprocessor':
         specifier: ^4.1.1
         version: 4.1.5(webpack@4.47.0)
+      '@nyarthan/prettier-config':
+        specifier: ^1.0.1
+        version: 1.0.1(prettier@3.6.2)
       '@types/cypress':
         specifier: ^1.1.0
         version: 1.1.6
@@ -26,6 +29,9 @@ importers:
       cypress:
         specifier: ^3.8.3
         version: 3.8.3
+      prettier:
+        specifier: ^3.6.2
+        version: 3.6.2
       start-server-and-test:
         specifier: ^1.10.8
         version: 1.15.5
@@ -583,6 +589,21 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
+
+  '@nyarthan/prettier-config@1.0.1':
+    resolution: {integrity: sha512-QArXCVBvaZX6+MvQFiNcrrCGAvkpJ3mFpMR7FazhUn7iujYsirMRwniw7/sN10xQUag0vypLVKy72GSZyUKt5g==}
+    peerDependencies:
+      '@ianvs/prettier-plugin-sort-imports': '>=4'
+      prettier: '>=3'
+      prettier-plugin-astro: '>=0.14'
+      prettier-plugin-tailwindcss: '>=0.6'
+    peerDependenciesMeta:
+      '@ianvs/prettier-plugin-sort-imports':
+        optional: true
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-tailwindcss:
+        optional: true
 
   '@sideway/address@4.1.5':
     resolution: {integrity: sha512-IqO/DUQHUkPeixNQ8n0JA6102hT9CmaljNTPmQ1u8MEhBo/R4Q8eKLN/vGZxuebwOroDB4cbpjheD4+/sKFK4Q==}
@@ -2658,6 +2679,11 @@ packages:
     resolution: {integrity: sha512-/+5VFTchJDoVj3bhoqi6UeymcD00DAwb1nJwamzPvHEszJ4FpF6SNNbUbOS8yI56qHzdV8eK0qEfOSiodkTdxg==}
     engines: {node: '>= 0.4'}
 
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
+    engines: {node: '>=14'}
+    hasBin: true
+
   process-nextick-args@2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
 
@@ -4299,6 +4325,10 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
     optional: true
+
+  '@nyarthan/prettier-config@1.0.1(prettier@3.6.2)':
+    dependencies:
+      prettier: 3.6.2
 
   '@sideway/address@4.1.5':
     dependencies:
@@ -6803,6 +6833,8 @@ snapshots:
   posix-character-classes@0.1.1: {}
 
   possible-typed-array-names@1.1.0: {}
+
+  prettier@3.6.2: {}
 
   process-nextick-args@2.0.1: {}
 

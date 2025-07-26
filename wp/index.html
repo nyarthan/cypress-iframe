@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <style>
@@ -17,30 +17,29 @@
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        height: 100px
+        height: 100px;
       }
       .hidden {
         display: none;
       }
     </style>
     <script>
-      function onClick (e) {
+      function onClick(e) {
         e.preventDefault();
-        if (e.target.className === 'hidden') {
-          return
+        if (e.target.className === "hidden") {
+          return;
         }
-        let el
+        let el;
         switch (e.target.id) {
-          case 'link-one':
-            el = document.querySelector('#link-two')
-            break
-          case 'link-two':
-            el = document.querySelector('#link-one')
-
+          case "link-one":
+            el = document.querySelector("#link-two");
+            break;
+          case "link-two":
+            el = document.querySelector("#link-one");
         }
         if (el) {
-          el.className = ''
-          e.target.className = 'hidden'
+          el.className = "";
+          e.target.className = "hidden";
         }
       }
     </script>
@@ -48,10 +47,21 @@
   <body>
     <div id="header">
       <div>
-        <a id="link-one" href='#' onclick="onClick(event)">Am I here?</a>
+        <a
+          id="link-one"
+          href="#"
+          onclick="onClick(event)"
+          >Am I here?</a
+        >
       </div>
       <div>
-        <a id="link-two" href='#' onclick="onClick(event)" class="hidden">Or am I here?</a>
+        <a
+          id="link-two"
+          href="#"
+          onclick="onClick(event)"
+          class="hidden"
+          >Or am I here?</a
+        >
       </div>
     </div>
     <iframe src="/iframe.html"></iframe>
