@@ -10,15 +10,6 @@ function sleep(timeout: number) {
   return new Promise((resolve) => setTimeout(resolve, timeout));
 }
 
-function timeout(cb: () => Promise<any>, timeout: number) {
-  return new Promise((resolve) => {
-    let done = false;
-    let finish = () => done || resolve();
-    cb().then(finish);
-    sleep(timeout).then(finish);
-  });
-}
-
 const frameLoaded: Cypress.Chainable["frameLoaded"] = (
   selector?: string | Partial<Cypress.IframeOptions>,
   opts?: Partial<Cypress.IframeOptions>,
@@ -42,48 +33,47 @@ const frameLoaded: Cypress.Chainable["frameLoaded"] = (
         message: [selector],
       }).snapshot()
     : null;
-  return cy
-    .get(selector, { log: false })
-    .then(
-      { timeout: fullOpts.timeout },
-      async ($frame: JQuery<HTMLIFrameElement>) => {
-        log?.set("$el", $frame);
-        if ($frame.length !== 1) {
-          throw new Error(
-            `cypress-iframe commands can only be applied to exactly one iframe at a time.  Instead found ${$frame.length}`,
-          );
-        }
+  return cy.get(selector, { log: false }).then(
+    { timeout: fullOpts.timeout },
+    // @ts-expect-error
+    async ($frame: JQuery<HTMLIFrameElement>) => {
+      log?.set("$el", $frame);
+      if ($frame.length !== 1) {
+        throw new Error(
+          `cypress-iframe commands can only be applied to exactly one iframe at a time.  Instead found ${$frame.length}`,
+        );
+      }
 
-        const contentWindow: Window = $frame.prop("contentWindow");
-        const hasNavigated =
-          fullOpts.url ?
-            () =>
-              typeof fullOpts.url === "string" ?
-                contentWindow.location.toString().includes(fullOpts.url)
-              : fullOpts.url?.test(contentWindow.location.toString())
-          : () => contentWindow.location.toString() !== "about:blank";
+      const contentWindow: Window = $frame.prop("contentWindow");
+      const hasNavigated =
+        fullOpts.url ?
+          () =>
+            typeof fullOpts.url === "string" ?
+              contentWindow.location.toString().includes(fullOpts.url)
+            : fullOpts.url?.test(contentWindow.location.toString())
+        : () => contentWindow.location.toString() !== "about:blank";
 
-        while (!hasNavigated()) {
-          await sleep(100);
-        }
+      while (!hasNavigated()) {
+        await sleep(100);
+      }
 
-        if (contentWindow.document.readyState === "complete") {
-          return $frame;
-        }
-
-        const loadLog = Cypress.log({
-          name: "Frame Load",
-          message: [contentWindow.location.toString()],
-          event: true,
-        } as any).snapshot();
-        await new Promise((resolve) => {
-          Cypress.$(contentWindow).on("load", resolve);
-        });
-        loadLog.end();
-        log?.finish();
+      if (contentWindow.document.readyState === "complete") {
         return $frame;
-      },
-    );
+      }
+
+      const loadLog = Cypress.log({
+        name: "Frame Load",
+        message: [contentWindow.location.toString()],
+        event: true,
+      } as any).snapshot();
+      await new Promise((resolve) => {
+        Cypress.$(contentWindow).on("load", resolve);
+      });
+      loadLog.end();
+      log?.finish();
+      return $frame;
+    },
+  );
 };
 Cypress.Commands.add("frameLoaded", frameLoaded);
 

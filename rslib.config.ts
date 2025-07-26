@@ -1,8 +1,7 @@
 import { defineConfig } from "@rslib/core";
 
 export default defineConfig({
-  // TODO: enable `dts` after fixing types
-  lib: [{ format: "cjs", syntax: "es2015", dts: false }],
+  lib: [{ format: "cjs", syntax: "es2015" }],
   output: { target: "web" },
   source: { entry: { index: "./src/index.ts" } },
 });

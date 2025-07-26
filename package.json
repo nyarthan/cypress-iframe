@@ -15,7 +15,8 @@
     "cypress:run:record": "start-server-and-test serve http://localhost:9000 \"cypress run --record\"",
     "serve": "serve wp -p 9000",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "types": "tsc"
   },
   "repository": {
     "type": "git",
