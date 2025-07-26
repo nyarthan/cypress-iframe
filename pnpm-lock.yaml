@@ -17,9 +17,6 @@ importers:
       '@rslib/core':
         specifier: 0.11.0
         version: 0.11.0(typescript@5.8.3)
-      '@types/cypress':
-        specifier: 1.1.6
-        version: 1.1.6
       '@types/node':
         specifier: 24.1.0
         version: 24.1.0
@@ -773,10 +770,6 @@ packages:
 
   '@tybys/wasm-util@0.10.0':
     resolution: {integrity: sha512-VyyPYFlOMNylG45GoAe0xDoLwWuowvf92F9kySqzYh8vmYm7D2u4iUJKa1tOUpS70Ku13ASrOkS4ScXFsTaCNQ==}
-
-  '@types/cypress@1.1.6':
-    resolution: {integrity: sha512-CfeLLD3+6vIWe2AO5hR63f1c8EbRzrp/j1ExubAwOTpwZFZvF3Nm9cOPQiUwzNmAUmZuhO0QVH98Qlujni6nPw==}
-    deprecated: This is a stub types definition. cypress provides its own type definitions, so you do not need this installed.
 
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
@@ -3092,10 +3085,6 @@ snapshots:
     dependencies:
       tslib: 2.8.1
     optional: true
-
-  '@types/cypress@1.1.6':
-    dependencies:
-      cypress: 14.5.3
 
   '@types/eslint-scope@3.7.7':
     dependencies:

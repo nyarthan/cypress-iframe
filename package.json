@@ -45,14 +45,10 @@
     "url": "https://github.com/nyarthan/cypress-iframe/issues"
   },
   "homepage": "https://github.com/nyarthan/cypress-iframe#readme",
-  "peerDependencies": {
-    "@types/cypress": "^1.1.0"
-  },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "6.0.4",
     "@nyarthan/prettier-config": "1.0.1",
     "@rslib/core": "0.11.0",
-    "@types/cypress": "1.1.6",
     "@types/node": "24.1.0",
     "cypress": "14.5.3",
     "prettier": "3.6.2",
