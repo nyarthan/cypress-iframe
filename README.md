@@ -7,23 +7,29 @@ Adds iframe support to [Cypress](https://www.cypress.io/).
 ## Installation
 
 ```bash
-npm install -D cypress-iframe
+npm add -D @nyarthan/cypress-iframe
+# or
+yarn add -D @nyarthan/cypress-iframe
+# or
+pnpm add -D @nyarthan/cypress-iframe
+# or
+bun add -D @nyarthan/cypress-iframe
 ```
 
 In your `cypress/support/commands.js` file, add the following:
 
 ```js
-import "cypress-iframe";
+import "@nyarthan/cypress-iframe";
 // or
-require("cypress-iframe");
+require("@nyarthan/cypress-iframe");
 ```
 
 If you're using typescript with cypress, and have not overridden the `types` or `typeRoots` in your tsc compiler options, then everything should work.
 
 If you have overridden them, or if it otherwise doesn't work out-of-the-box, you will also either want to:
 
-1. Add `///<reference types="cypress-iframe" />` to the top of your cypress tests in which you use the commands
-1. Add a `globals.d.ts` in the root of your `cypress` directory and add `///<reference types="cypress-iframe" />` to it
+1. Add `///<reference types="@nyarthan/cypress-iframe" />` to the top of your cypress tests in which you use the commands
+1. Add a `globals.d.ts` in the root of your `cypress` directory and add `///<reference types="@nyarthan/cypress-iframe" />` to it
 
 ## Usage
 
