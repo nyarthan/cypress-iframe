@@ -1,4 +1,7 @@
 # Cypress iframe [![install size](https://packagephobia.now.sh/badge?p=cypress-iframe)](https://packagephobia.now.sh/result?p=cypress-iframe)
+
+> This project is a fork of https://gitlab.com/kgroat/cypress-iframe by [Kevin Groat](https://gitlab.com/kgroat).
+
 Adds iframe support to [Cypress](https://www.cypress.io/).
 
 ## Installation
