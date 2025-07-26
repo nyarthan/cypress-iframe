@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/kgroat/cypress-iframe.git"
+    "url": "git+ssh://git@github.com/nyarthan/cypress-iframe.git"
   },
   "keywords": [
     "cypress",
@@ -31,11 +31,18 @@
     "email": "kgroat09@gmail.com",
     "url": "https://www.kgroat.dev/"
   },
+  "contributors": [
+    {
+      "name": "Jannis Morgenstern",
+      "email": "jannis.n.morgenstern@gmail.com",
+      "url": "https://github.com/nyarthan"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/kgroat/cypress-iframe/issues"
+    "url": "https://github.com/nyarthan/cypress-iframe/issues"
   },
-  "homepage": "https://gitlab.com/kgroat/cypress-iframe#readme",
+  "homepage": "https://github.com/nyarthan/cypress-iframe#readme",
   "peerDependencies": {
     "@types/cypress": "^1.1.0"
   },
