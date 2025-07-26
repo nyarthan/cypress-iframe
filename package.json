@@ -9,7 +9,7 @@
     "postversion": "npm publish",
     "postpublish": "git push origin --all; git push origin --tags",
     "prepare": "npm run build",
-    "build": "rm -rf dist && tsc --project ./tsconfig-build.json",
+    "build": "rslib build",
     "start": "start-server-and-test wp http-get://localhost:9000 \"cypress open\"",
     "test": "start-server-and-test wp http-get://localhost:9000 \"cypress run\"",
     "record": "start-server-and-test wp http-get://localhost:9000 \"cypress run --record\"",
@@ -51,6 +51,7 @@
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^4.1.1",
     "@nyarthan/prettier-config": "^1.0.1",
+    "@rslib/core": "^0.11.0",
     "@types/cypress": "^1.1.0",
     "@types/node": "^13.7.0",
     "@types/webpack": "^4.41.3",
