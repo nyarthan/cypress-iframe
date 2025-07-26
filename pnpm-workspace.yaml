@@ -1,0 +1,11 @@
+strictDepBuilds: true
+
+onlyBuiltDependencies:
+  # Required to install platform-specific binary.
+  # https://github.com/cypress-io/cypress/blob/master/cli/lib/tasks/install.js#L4
+  - "cypress"
+
+ignoredBuiltDependencies:
+  # Only shows a banner.
+  # https://github.com/zloirock/core-js/blob/master/packages/core-js/postinstall.js
+  - "core-js"

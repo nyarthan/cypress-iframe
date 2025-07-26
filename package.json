@@ -59,5 +59,6 @@
     "serve": "14.2.4",
     "start-server-and-test": "2.0.12",
     "typescript": "5.8.3"
-  }
+  },
+  "packageManager": "pnpm@10.13.1"
 }
