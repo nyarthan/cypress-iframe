@@ -1,7 +1,7 @@
 context("cypress-iframe", () => {
   it("should allow you to interact with elements in an iframe", () => {
     cy.visit("/");
-    cy.frameLoaded({ url: "http://localhost:9000/iframe.html" });
+    cy.frameLoaded({ url: "http://localhost:9000/iframe" });
     cy.enter().then((body) => {
       body().find("#spooky").should("not.be.visible");
       body().contains("Click Me!").click();
@@ -19,8 +19,8 @@ context("cypress-iframe", () => {
 
   it("should work with a selector", () => {
     cy.visit("/double.html");
-    cy.frameLoaded("#frame-one", { url: "http://localhost:9000/iframe.html" });
-    cy.frameLoaded("#frame-two", { url: "http://localhost:9000/iframe.html" });
+    cy.frameLoaded("#frame-one", { url: "http://localhost:9000/iframe" });
+    cy.frameLoaded("#frame-two", { url: "http://localhost:9000/iframe" });
     cy.enter("#frame-one").then((body) => {
       body().find("#spooky").should("not.be.visible");
       body().contains("Click Me!").click();

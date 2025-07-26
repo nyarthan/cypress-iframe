@@ -10,10 +10,10 @@
     "postpublish": "git push origin --all; git push origin --tags",
     "prepare": "npm run build",
     "build": "rslib build",
-    "start": "start-server-and-test wp http-get://localhost:9000 \"cypress open\"",
-    "test": "start-server-and-test wp http-get://localhost:9000 \"cypress run\"",
-    "record": "start-server-and-test wp http-get://localhost:9000 \"cypress run --record\"",
-    "wp": "webpack-dev-server",
+    "cypress:open": "start-server-and-test serve http://localhost:9000 \"cypress open\"",
+    "cypress:run": "start-server-and-test serve http://localhost:9000 \"cypress run\"",
+    "cypress:run:record": "start-server-and-test serve http://localhost:9000 \"cypress run --record\"",
+    "serve": "serve wp -p 9000",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -54,16 +54,10 @@
     "@rslib/core": "0.11.0",
     "@types/cypress": "1.1.6",
     "@types/node": "24.1.0",
-    "@types/webpack": "5.28.5",
-    "@types/webpack-dev-server": "4.7.2",
     "cypress": "14.5.3",
     "prettier": "3.6.2",
+    "serve": "14.2.4",
     "start-server-and-test": "2.0.12",
-    "ts-loader": "9.5.2",
-    "ts-node": "10.9.2",
-    "typescript": "5.8.3",
-    "webpack": "5.100.2",
-    "webpack-cli": "6.0.1",
-    "webpack-dev-server": "5.2.2"
+    "typescript": "5.8.3"
   }
 }
