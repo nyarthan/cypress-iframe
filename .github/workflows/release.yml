@@ -38,7 +38,7 @@ jobs:
 
       - name: "Create Release Pull Request or Publish to npm"
         id: "changesets"
-        uses: "changesets/action@v1"
+        uses: "changesets/action@bd5d1d2a62e4b24b413ec54e34c667c025a53d10"
         with:
           version: |
             pnpm changeset version
