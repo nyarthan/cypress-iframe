@@ -1,4 +1,9 @@
-# Cypress iframe [![install size](https://packagephobia.now.sh/badge?p=cypress-iframe)](https://packagephobia.now.sh/result?p=cypress-iframe)
+# Cypress iframe
+
+[![NPM Version](https://img.shields.io/npm/v/%40nyarthan%2Fcypress-iframe?style=for-the-badge&logo=npm&logoColor=%23fff&label=npm&labelColor=cd0000&color=%23fff)](https://www.npmjs.com/@nyarthan/cypress-iframe)
+[![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/%40nyarthan%2Fcypress-iframe?style=for-the-badge&logo=npm&logoColor=%23fff&label=size&labelColor=cd0000&color=%23fff)](https://www.npmjs.com/@nyarthan/cypress-iframe)
+[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/nyarthan/cypress-iframe/ci.yml?branch=master&style=for-the-badge&logo=github&logoColor=%23fff&label=CI&labelColor=%23151b23)](https://github.com/nyarthan/cypress-iframe/actions/workflows/ci.yml)
+[![GitHub License](https://img.shields.io/github/license/nyarthan/cypress-iframe?style=for-the-badge&labelColor=%23151b23&color=%23f0f6fc)](./LICENSE)
 
 > This project is a fork of https://gitlab.com/kgroat/cypress-iframe by [Kevin Groat](https://gitlab.com/kgroat).
 
