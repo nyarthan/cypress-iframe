@@ -1,5 +1,11 @@
 # @nyarthan/cypress-iframe
 
+## 1.0.2
+
+### Patch Changes
+
+- c55d69e: update badges
+
 ## 0.1.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@nyarthan/cypress-iframe",
-  "version": "0.1.2",
+  "version": "1.0.2",
   "description": "Adds iframe support to Cypress",
   "main": "dist/index.js",
   "types": "index.d.ts",
