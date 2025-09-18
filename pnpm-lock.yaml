@@ -12,8 +12,8 @@ importers:
         specifier: 2.29.5
         version: 2.29.5
       '@nyarthan/prettier-config':
-        specifier: 1.0.1
-        version: 1.0.1(prettier@3.6.2)
+        specifier: 1.0.3
+        version: 1.0.3(prettier@3.6.2)
       '@rslib/core':
         specifier: 0.11.0
         version: 0.11.0(typescript@5.8.3)
@@ -237,8 +237,8 @@ packages:
     resolution: {integrity: sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg==}
     engines: {node: '>= 8'}
 
-  '@nyarthan/prettier-config@1.0.1':
-    resolution: {integrity: sha512-QArXCVBvaZX6+MvQFiNcrrCGAvkpJ3mFpMR7FazhUn7iujYsirMRwniw7/sN10xQUag0vypLVKy72GSZyUKt5g==}
+  '@nyarthan/prettier-config@1.0.3':
+    resolution: {integrity: sha512-w1+r7gmVb3yANMsQg2xHbwDeMUDF4SMO3vZdAgIJP0Z7jDt/t4qsl2B2lyKSof+clcqqcLHPsn/BsRe7KAR5MQ==}
     peerDependencies:
       '@ianvs/prettier-plugin-sort-imports': '>=4'
       prettier: '>=3'
@@ -2092,7 +2092,7 @@ snapshots:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.19.1
 
-  '@nyarthan/prettier-config@1.0.1(prettier@3.6.2)':
+  '@nyarthan/prettier-config@1.0.3(prettier@3.6.2)':
     dependencies:
       prettier: 3.6.2
 
