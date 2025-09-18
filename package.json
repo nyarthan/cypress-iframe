@@ -45,7 +45,7 @@
     "knip:prod:fix": "pnpm knip --production --fix",
     "prerelease": "pnpm build",
     "release": "pnpm publish --access public --provenance",
-    "serve": "serve wp -p 9000",
+    "serve": "serve fixtures -p 9000",
     "types": "tsc"
   },
   "devDependencies": {
