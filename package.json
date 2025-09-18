@@ -61,5 +61,8 @@
     "start-server-and-test": "2.0.12",
     "typescript": "5.8.3"
   },
+  "peerDependencies": {
+    "cypress": ">=13"
+  },
   "packageManager": "pnpm@10.13.1"
 }
