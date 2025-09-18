@@ -2,28 +2,6 @@
   "name": "@nyarthan/cypress-iframe",
   "version": "1.0.2",
   "description": "Adds iframe support to Cypress",
-  "main": "dist/index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "build": "rslib build",
-    "cypress:open": "start-server-and-test serve http://localhost:9000 \"cypress open\"",
-    "cypress:run": "start-server-and-test serve http://localhost:9000 \"cypress run\"",
-    "cypress:run:record": "start-server-and-test serve http://localhost:9000 \"cypress run --record\"",
-    "serve": "serve wp -p 9000",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "types": "tsc",
-    "prerelease": "pnpm build",
-    "release": "pnpm publish --access public --provenance",
-    "knip": "knip --cache --include dependencies,files,exports,classMembers,nsTypes,nsExports,duplicates,binaries,types",
-    "knip:fix": "pnpm knip --fix",
-    "knip:prod": "pnpm knip --production",
-    "knip:prod:fix": "pnpm knip --production --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/nyarthan/cypress-iframe.git"
-  },
   "keywords": [
     "cypress",
     "iframe",
@@ -31,6 +9,15 @@
     "e2e",
     "test"
   ],
+  "homepage": "https://github.com/nyarthan/cypress-iframe#readme",
+  "bugs": {
+    "url": "https://github.com/nyarthan/cypress-iframe/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nyarthan/cypress-iframe.git"
+  },
+  "license": "MIT",
   "author": {
     "name": "Kevin Groat (kgroat)",
     "email": "kgroat09@gmail.com",
@@ -43,11 +30,24 @@
       "url": "https://github.com/nyarthan"
     }
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nyarthan/cypress-iframe/issues"
+  "main": "dist/index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "rslib build",
+    "cypress:open": "start-server-and-test serve http://localhost:9000 \"cypress open\"",
+    "cypress:run": "start-server-and-test serve http://localhost:9000 \"cypress run\"",
+    "cypress:run:record": "start-server-and-test serve http://localhost:9000 \"cypress run --record\"",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "knip": "knip --cache --include dependencies,files,exports,classMembers,nsTypes,nsExports,duplicates,binaries,types",
+    "knip:fix": "pnpm knip --fix",
+    "knip:prod": "pnpm knip --production",
+    "knip:prod:fix": "pnpm knip --production --fix",
+    "prerelease": "pnpm build",
+    "release": "pnpm publish --access public --provenance",
+    "serve": "serve wp -p 9000",
+    "types": "tsc"
   },
-  "homepage": "https://github.com/nyarthan/cypress-iframe#readme",
   "devDependencies": {
     "@changesets/cli": "2.29.5",
     "@nyarthan/prettier-config": "1.0.1",
@@ -56,6 +56,7 @@
     "cypress": "14.5.3",
     "knip": "5.63.1",
     "prettier": "3.6.2",
+    "prettier-plugin-packagejson": "2.5.19",
     "serve": "14.2.4",
     "start-server-and-test": "2.0.12",
     "typescript": "5.8.3"
