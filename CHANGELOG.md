@@ -1,5 +1,11 @@
 # @nyarthan/cypress-iframe
 
+## 1.0.3
+
+### Patch Changes
+
+- c97f89d: add cypress 13 as peer dependency
+
 ## 1.0.2
 
 ### Patch Changes
