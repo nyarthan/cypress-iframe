@@ -50,7 +50,6 @@
   "homepage": "https://github.com/nyarthan/cypress-iframe#readme",
   "devDependencies": {
     "@changesets/cli": "2.29.5",
-    "@cypress/webpack-preprocessor": "6.0.4",
     "@nyarthan/prettier-config": "1.0.1",
     "@rslib/core": "0.11.0",
     "@types/node": "24.1.0",
