@@ -9,7 +9,6 @@
   outputs =
     inputs@{
       flake-parts,
-      nixpkgs,
       ...
     }:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -22,11 +21,7 @@
 
       perSystem =
         {
-          config,
-          self',
-          inputs',
           pkgs,
-          system,
           ...
         }:
         {
