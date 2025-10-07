@@ -64,5 +64,11 @@
   "peerDependencies": {
     "cypress": ">=13"
   },
-  "packageManager": "pnpm@10.13.1"
+  "packageManager": "pnpm@10.15.1",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.9.0"
+    }
+  }
 }
