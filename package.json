@@ -52,7 +52,7 @@
     "@changesets/cli": "2.29.7",
     "@nyarthan/prettier-config": "1.0.3",
     "@rslib/core": "0.13.3",
-    "@types/node": "24.1.0",
+    "@types/node": "24.7.0",
     "cypress": "15.2.0",
     "knip": "5.63.1",
     "prettier": "3.6.2",
