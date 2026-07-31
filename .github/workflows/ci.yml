@@ -15,7 +15,7 @@ concurrency: "${{ github.workflow }}-${{ github.ref }}"
 jobs:
   format:
     name: "Check Format"
-    runs-on: "ubuntu-22.04-arm"
+    runs-on: "ubuntu-24.04-arm"
     steps:
       - name: "Checkout Repository"
         uses: "actions/checkout@v6"
@@ -33,7 +33,7 @@ jobs:
 
   build:
     name: "Build Library"
-    runs-on: "ubuntu-22.04-arm"
+    runs-on: "ubuntu-24.04-arm"
     steps:
       - name: "Checkout Repository"
         uses: "actions/checkout@v6"
@@ -51,7 +51,7 @@ jobs:
 
   knip:
     name: "Run Knip"
-    runs-on: "ubuntu-22.04-arm"
+    runs-on: "ubuntu-24.04-arm"
     steps:
       - name: "Checkout Repository"
         uses: "actions/checkout@v6"
@@ -69,7 +69,7 @@ jobs:
 
   test:
     name: "Cypress Tests"
-    runs-on: "ubuntu-22.04-arm"
+    runs-on: "ubuntu-24.04-arm"
     steps:
       - name: "Checkout Repository"
         uses: "actions/checkout@v6"
