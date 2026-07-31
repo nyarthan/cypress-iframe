@@ -55,7 +55,7 @@
     "@types/node": "24.1.0",
     "cypress": "15.10.0",
     "knip": "5.85.0",
-    "prettier": "3.8.1",
+    "prettier": "3.9.6",
     "prettier-plugin-packagejson": "3.0.0",
     "serve": "14.2.5",
     "start-server-and-test": "3.0.11",
